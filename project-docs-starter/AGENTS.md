@@ -43,10 +43,22 @@ After implementation:
 
 ---
 
-## Documentation Rules
+## Current State Maintenance
 
-If architecture or behavior changes:
+`docs/current-state.md` must describe only the current implemented system behavior and architecture.
+
+When architecture, routing, permissions, realtime ownership, database structure, shared contracts, or major feature status changes:
 - update current-state.md
-- remove outdated information
-- keep summaries concise
-- avoid giant append-only logs
+- remove outdated descriptions
+- clearly mark:
+  - implemented
+  - partially implemented
+  - planned
+
+Do not leave contradictory old/new architecture descriptions together.
+
+Historical migration details belong in:
+- `docs/archive/`
+- `docs/refactor/`
+
+not in current-state.md.
